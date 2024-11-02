@@ -1,0 +1,187 @@
+/* Padrões */
+
+:root {
+  --c1: #e6e9f2;
+  --c2: #ced1d9;
+  --c3: #9d9fa6;
+  --c4: #85878c;
+  --c5: #797b80;
+  --c6: #676a73;
+  --c7: #5c5e66;
+  --c8: #45474d;
+  --c9: #2e2f33;
+  --c10: #191a1c;
+  --p1: #395fe5;
+  --p2: #274ed7;
+  --p3: #1d40bf;
+  --s1: #f29255;
+  --s2: #e58040;
+  --s3: #cc6829;
+  --grad1: linear-gradient(var(--s1) 0%, var(--s2) 50%, var(--s3) 100%);
+  --grad2: linear-gradient(var(--p1) 0%, var(--p2) 50%, var(--p3) 100%);
+}
+
+.c1 {
+  color: var(--c1);
+}
+.c2 {
+  color: var(--c2);
+}
+.c3 {
+  color: var(--c3);
+}
+.c4 {
+  color: var(--c4);
+}
+.c5 {
+  color: var(--c5);
+}
+.c6 {
+  color: var(--c6);
+}
+.c7 {
+  color: var(--c7);
+}
+.c8 {
+  color: var(--c8);
+}
+.c9 {
+  color: var(--c9);
+}
+.c10 {
+  color: var(--c10);
+}
+.p1 {
+  color: var(--p1);
+}
+.p2 {
+  color: var(--p2);
+}
+.p3 {
+  color: var(--p3);
+}
+.s1 {
+  color: var(--s1);
+}
+.s2 {
+  color: var(--s2);
+}
+.s3 {
+  color: var(--s3);
+}
+
+.font-S {
+  font: 500 20px/1.5 "Hanken Grotesk";
+}
+
+.font-M1 {
+  font: 700 30px/1 "Hanken Grotesk";
+  text-transform: uppercase;
+}
+
+.font-M2 {
+  font: 500 30px/1 "Tomorrow";
+}
+
+.font-M3 {
+  font: 700 30px/1.66 "Hanken Grotesk";
+}
+
+.font-L {
+  font: 500 75px/0.66 "Courier Prime";
+}
+
+.font-XL {
+  font: 500 75px/1.33 "Tomorrow";
+}
+
+/* Redefinição */
+
+body,
+h1,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Estilos */
+
+.grid {
+  max-width: 1225px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.header-bg {
+  background: var(--c9);
+  padding: 25px 0;
+}
+
+header .grid {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header-menu {
+  display: flex;
+  gap: 45px;
+}
+
+.header-menu a {
+  padding: 5px;
+  transition: all 0.3s;
+  /* transition-property: all;
+  transition-duration: 0.3s; */
+}
+
+.header-menu a:hover {
+  color: var(--c1);
+}
+
+.header-menu a:last-child:hover {
+  color: var(--s1);
+}
+
+.intro-bg {
+  background-image: url("./static/intro.jpg");
+}
+
+.intro-conteudo {
+  padding: 125px 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  text-align: center;
+}
+
+.intro-conteudo h1 {
+  color: white;
+  margin-bottom: 50px;
+}
+
+.intro-conteudo p {
+  max-width: 75ch;
+  margin-bottom: 75px;
+}
+
+.intro-redes {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.intro-redes a {
+  width: 75px;
+  height: 75px;
+  transition: all 0.2s;
+}
+
+.intro-redes a:hover {
+  margin: 0 25px;
+}
