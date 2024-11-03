@@ -99,6 +99,7 @@
 
 body,
 h1,
+h2,
 p,
 a {
   margin: 0;
@@ -111,7 +112,7 @@ a {
 
 /* Estilos */
 
-.grid {
+.container {
   max-width: 1225px;
   margin: 0 auto;
   display: flex;
@@ -123,7 +124,7 @@ a {
   padding: 25px 0;
 }
 
-header .grid {
+header .container {
   justify-content: space-between;
   align-items: baseline;
 }
@@ -136,8 +137,6 @@ header .grid {
 .header-menu a {
   padding: 5px;
   transition: all 0.3s;
-  /* transition-property: all;
-  transition-duration: 0.3s; */
 }
 
 .header-menu a:hover {
@@ -184,4 +183,77 @@ header .grid {
 
 .intro-redes a:hover {
   margin: 0 25px;
+}
+
+.projetos {
+  display: grid;
+  text-align: center;
+  margin-top: 125px;
+}
+
+.projetos h1 {
+  position: relative;
+  margin-bottom: 52px;
+}
+
+.projetos h1::after {
+  content: "";
+  position: absolute;
+  background-color: var(--s2);
+  height: 2px;
+  width: 75px;
+  bottom: -2px;
+  left: calc(50% - calc(75px / 2));
+}
+
+.projetos-conteudo {
+  display: flex;
+  gap: 120px 75px;
+  max-width: 1225px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+
+.projeto-item {
+  max-width: 350px;
+  max-height: 100%;
+}
+
+.projeto-item h2 {
+  position: relative;
+  margin-bottom: 27px;
+}
+
+.projeto-item h2::after {
+  content: "";
+  position: absolute;
+  background-color: var(--c2);
+  height: 2px;
+  width: 75px;
+  bottom: 0px;
+  left: calc(50% - calc(75px / 2));
+}
+
+.projeto-item img {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.projeto-item p {
+  margin-bottom: 70px;
+}
+
+.projeto-item a {
+  background-color: var(--c6);
+  padding: 20px 30px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.projeto-item a:hover {
+  background-color: var(--p1);
 }
