@@ -73,24 +73,19 @@
 .font-S {
   font: 500 20px/1.5 "Hanken Grotesk";
 }
-
 .font-M1 {
   font: 700 30px/1 "Hanken Grotesk";
   text-transform: uppercase;
 }
-
 .font-M2 {
   font: 500 30px/1 "Tomorrow";
 }
-
 .font-M3 {
   font: 700 30px/1.66 "Hanken Grotesk";
 }
-
 .font-L {
   font: 500 75px/0.66 "Courier Prime";
 }
-
 .font-XL {
   font: 500 75px/1.33 "Tomorrow";
 }
@@ -101,9 +96,12 @@ body,
 h1,
 h2,
 p,
-a {
+a,
+ul,
+li {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 a {
@@ -212,7 +210,7 @@ header .container {
   max-width: 1225px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 75px;
+  margin-bottom: 95px;
 }
 
 .projeto-item {
@@ -256,4 +254,114 @@ header .container {
 
 .projeto-item a:hover {
   background-color: var(--p1);
+}
+
+.detalhe {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+
+.sobre-mim h1 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 75px;
+}
+
+.sobre-mim h1::after {
+  content: "";
+  position: absolute;
+  background-color: var(--p2);
+  height: 2px;
+  width: 75px;
+  bottom: -2px;
+  left: calc(50% - calc(75px / 2));
+}
+
+.sobre-conteudo {
+  display: flex;
+  justify-content: space-between;
+  max-width: 880px;
+}
+
+.sobre-conteudo h2 {
+  margin-left: 30px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#programacao h2::before {
+  content: url("./static/sobre-mim/programacao.svg");
+  position: absolute;
+  left: -30px;
+}
+
+#design h2::before {
+  content: url("./static/sobre-mim/design.svg");
+  position: absolute;
+  left: -30px;
+}
+#ferramentas h2::before {
+  content: url("./static/sobre-mim/ferramentas.svg");
+  position: absolute;
+  left: -30px;
+}
+#formacoes h2::before {
+  content: url("./static/sobre-mim/formacoes.svg");
+  position: absolute;
+  left: -30px;
+}
+#idiomas h2::before {
+  content: url("./static/sobre-mim/idiomas.svg");
+  position: absolute;
+  left: -30px;
+}
+
+.sobre-item {
+  min-height: 205px;
+  position: relative;
+}
+
+.sobre-tecnico .sobre-item-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 190px));
+}
+.sobre-academico .sobre-item-lista {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.sobre-item-lista::after {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 1px;
+  left: 30px;
+  bottom: 30px;
+  background-color: var(--c2);
+}
+
+.sobre-item:last-child ::after {
+  height: 0;
+}
+
+.sobre-item-lista li {
+  margin-bottom: 15px;
+  margin-left: 40px;
+  position: relative;
+}
+
+.sobre-item-lista :last-child {
+  margin-bottom: 61px;
+}
+
+.sobre-item-lista li::before {
+  position: absolute;
+  content: "";
+  background-color: var(--p1);
+  width: 5px;
+  height: 2px;
+  left: -10px;
+  top: 14px;
 }
