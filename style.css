@@ -76,6 +76,7 @@
 .font-M1 {
   font: 700 30px/1 "Hanken Grotesk";
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .font-M2 {
   font: 500 30px/1 "Tomorrow";
@@ -296,7 +297,6 @@ header .container {
   position: absolute;
   left: -30px;
 }
-
 #design h2::before {
   content: url("./static/sobre-mim/design.svg");
   position: absolute;
@@ -327,6 +327,7 @@ header .container {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 190px));
 }
+
 .sobre-academico .sobre-item-lista {
   display: grid;
   grid-template-columns: auto;
@@ -364,4 +365,121 @@ header .container {
   height: 2px;
   left: -10px;
   top: 14px;
+}
+
+.contatos {
+  background-color: var(--c8);
+  padding-top: 75px;
+  padding-bottom: 125px;
+}
+
+.contatos h1 {
+  position: relative;
+  margin-bottom: 75px;
+  display: flex;
+  justify-content: center;
+}
+
+.contatos h1::after {
+  content: "";
+  position: absolute;
+  background-color: var(--s2);
+  height: 2px;
+  width: 75px;
+  bottom: 0px;
+  left: calc(50% - calc(75px / 2));
+}
+
+.contatos-tudo {
+  max-width: 880px;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.contatos h2 {
+  color: white;
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.contatos li {
+  margin-bottom: 50px;
+  position: relative;
+  margin-left: 40px;
+}
+
+.contatos li::before {
+  position: absolute;
+  content: "";
+  background-color: var(--s1);
+  width: 5px;
+  height: 2px;
+  left: -10px;
+  top: 14px;
+}
+
+#telefone::before {
+  content: url("./static/contatos/telefone.svg");
+  position: absolute;
+  left: -30px;
+}
+#email::before {
+  content: url("./static/contatos/email.svg");
+  position: absolute;
+  left: -30px;
+}
+#algo::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 15px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+}
+
+.contatos label {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contatos label + input {
+  margin-bottom: 50px;
+}
+
+.contatos-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 490px;
+}
+
+.contatos-form input {
+  min-height: 50px;
+  padding: 0 15px;
+  border-radius: 5px;
+  color: black;
+}
+
+.contatos-form textarea {
+  min-height: 150px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: black;
+}
+
+.contatos > a {
+  display: flex;
+  color: white;
+  background: var(--grad1);
+  display: flex;
+  justify-self: center;
+  padding: 20px 50px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.contatos > a:hover {
+  padding: 20px 60px;
+  cursor: pointer;
 }
