@@ -118,6 +118,12 @@ a {
   justify-content: center;
 }
 
+@media (max-width: 1225px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
 .header-bg {
   background: var(--c9);
   padding: 25px 0;
@@ -126,6 +132,7 @@ a {
 header .container {
   justify-content: space-between;
   align-items: baseline;
+  padding: 0 50px;
 }
 
 .header-menu {
@@ -144,6 +151,39 @@ header .container {
 
 .header-menu a:last-child:hover {
   color: var(--s1);
+}
+
+@media (max-width: 1225px) {
+  header .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-menu {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-menu a[href="#contatos"],
+  .header-menu a[href="#sobre"] {
+    display: none;
+    width: 0px;
+  }
+  .header-menu a[href="#projetos"] {
+    color: var(--s1);
+  }
+}
+
+@media (max-width: 768px) {
+  header .logo {
+    content: url("./static/logo2.svg");
+  }
+}
+
+@media (max-width: 375px) {
+  header .container {
+    padding: 0 30px;
+  }
 }
 
 .intro-bg {
@@ -459,6 +499,7 @@ header .container {
   padding: 0 15px;
   border-radius: 5px;
   color: black;
+  border: none;
 }
 
 .contatos-form textarea {
@@ -466,6 +507,7 @@ header .container {
   padding: 10px 15px;
   border-radius: 5px;
   color: black;
+  border: none;
 }
 
 .contatos > a {
@@ -482,4 +524,11 @@ header .container {
 .contatos > a:hover {
   padding: 20px 60px;
   cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--c9);
+  padding: 10px 0;
 }
