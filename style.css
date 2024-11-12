@@ -73,6 +73,13 @@
 .font-S {
   font: 500 20px/1.5 "Hanken Grotesk";
 }
+
+@media (max-width: 768px) {
+  .font-S {
+    font: 500 15px/1.5 "Hanken Grotesk";
+  }
+}
+
 .font-M1 {
   font: 700 30px/1 "Hanken Grotesk";
   text-transform: uppercase;
@@ -87,6 +94,13 @@
 .font-L {
   font: 500 75px/0.66 "Courier Prime";
 }
+
+@media (max-width: 768px) {
+  .font-L {
+    font: 500 50px/0.9 "Courier Prime";
+  }
+}
+
 .font-XL {
   font: 500 75px/1.33 "Tomorrow";
 }
@@ -198,14 +212,42 @@ header .container {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .intro-conteudo {
+    padding: 75px 0 50px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .intro-conteudo {
+    padding: 50px 0;
+  }
+}
+
 .intro-conteudo h1 {
   color: white;
   margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .intro-conteudo h1 {
+    margin-bottom: 30px;
+  }
 }
 
 .intro-conteudo p {
   max-width: 75ch;
+  margin-left: 50px;
+  margin-right: 50px;
   margin-bottom: 75px;
+}
+
+@media (max-width: 768px) {
+  .intro-conteudo p {
+    margin-bottom: 50px;
+  }
 }
 
 .intro-redes {
@@ -214,14 +256,29 @@ header .container {
   gap: 50px;
 }
 
+@media (max-width: 425px) {
+  .intro-redes {
+    gap: 25px;
+  }
+}
+
 .intro-redes a {
   width: 75px;
   height: 75px;
   transition: all 0.2s;
 }
 
+@media (max-width: 425px) {
+}
+
 .intro-redes a:hover {
   margin: 0 25px;
+}
+
+@media (max-width: 768px) {
+  .intro-redes a:hover {
+    margin: 0 0;
+  }
 }
 
 .projetos {
