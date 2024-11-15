@@ -85,12 +85,24 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+@media (max-width: 768px) {
+  .font-M1 {
+    font: 700 20px/1 "Hanken Grotesk";
+  }
+}
+
 .font-M2 {
   font: 500 30px/1 "Tomorrow";
 }
 .font-M3 {
   font: 700 30px/1.66 "Hanken Grotesk";
 }
+@media (max-width: 768px) {
+  .font-M3 {
+    font: 700 20px/1.66 "Hanken Grotesk";
+  }
+}
+
 .font-L {
   font: 500 75px/0.66 "Courier Prime";
 }
@@ -103,6 +115,12 @@
 
 .font-XL {
   font: 500 75px/1.33 "Tomorrow";
+}
+
+@media (max-width: 768px) {
+  .font-XL {
+    font: 500 50px/1.33 "Tomorrow";
+  }
 }
 
 /* Redefinição */
@@ -287,6 +305,13 @@ header .container {
   margin-top: 125px;
 }
 
+@media (max-width: 768px) {
+  .projetos {
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+}
+
 .projetos h1 {
   position: relative;
   margin-bottom: 52px;
@@ -311,9 +336,14 @@ header .container {
   margin-bottom: 95px;
 }
 
+@media (max-width: 425px) {
+  .projetos-conteudo {
+    gap: 150px 75px;
+  }
+}
+
 .projeto-item {
   max-width: 350px;
-  max-height: 100%;
 }
 
 .projeto-item h2 {
@@ -337,8 +367,22 @@ header .container {
   margin-bottom: 30px;
 }
 
+@media (max-width: 425px) {
+  .projeto-item img {
+    width: 75%;
+    height: 50%;
+  }
+}
+
 .projeto-item p {
   margin-bottom: 70px;
+  padding: 0 25px;
+}
+
+@media (max-width: 425px) {
+  .projeto-item p {
+    margin-bottom: 50px;
+  }
 }
 
 .projeto-item a {
@@ -348,6 +392,7 @@ header .container {
   letter-spacing: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
+  /* box-sizing: border-box; */
 }
 
 .projeto-item a:hover {
