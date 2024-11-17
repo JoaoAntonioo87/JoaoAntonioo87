@@ -599,6 +599,12 @@ header .container {
   padding-bottom: 125px;
 }
 
+@media (max-width: 425px) {
+  .contatos {
+    padding-bottom: 75px;
+  }
+}
+
 .contatos h1 {
   position: relative;
   margin-bottom: 75px;
@@ -622,17 +628,69 @@ header .container {
   margin-bottom: 100px;
 }
 
-.contatos h2 {
+@media (max-width: 1024px) {
+  .contatos-tudo {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contatos-tudo {
+    display: grid;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+  .contatos-informacoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .contatos-item img {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .contatos-informacoes {
+    gap: 10px;
+  }
+}
+
+.contatos-item {
+  min-width: 150px;
+  max-width: 1000px;
+}
+
+.contatos-item h2 {
   color: white;
   position: relative;
   margin-bottom: 20px;
   margin-left: 30px;
 }
 
+@media (max-width: 768px) {
+  .contatos h2 {
+    margin-left: 0px;
+    margin-bottom: 15px;
+  }
+}
+
 .contatos li {
   margin-bottom: 50px;
   position: relative;
   margin-left: 40px;
+  max-width: 25ch;
+}
+
+@media (max-width: 768px) {
+  .contatos li {
+    margin: 0;
+    max-width: 50ch;
+  }
 }
 
 .contatos li::before {
@@ -645,24 +703,37 @@ header .container {
   top: 14px;
 }
 
-#telefone::before {
-  content: url("./static/contatos/telefone.svg");
-  position: absolute;
-  left: -30px;
+@media (max-width: 1024px) {
+  .contatos li::before {
+    top: 10px;
+  }
 }
-#email::before {
-  content: url("./static/contatos/email.svg");
-  position: absolute;
-  left: -30px;
+
+@media (max-width: 768px) {
+  .contatos li::before {
+    height: 0px;
+  }
 }
-#algo::before {
-  content: "";
+
+.contatos-informacoes ul {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  position: relative;
+}
+
+.contatos-informacoes ul {
+  justify-content: start;
+}
+
+.contatos-informacoes img {
   position: absolute;
-  left: -30px;
-  top: 15px;
-  height: 20px;
-  width: 20px;
-  background-color: white;
+  top: -55px;
+}
+
+@media (max-width: 1024px) {
+  .contatos-informacoes img {
+    top: -45px;
+  }
 }
 
 .contatos label {
@@ -674,10 +745,28 @@ header .container {
   margin-bottom: 50px;
 }
 
+@media (max-width: 425px) {
+  .contatos label + input {
+    margin-bottom: 25px;
+  }
+}
+
 .contatos-form {
   display: flex;
   flex-direction: column;
   min-width: 490px;
+}
+
+@media (max-width: 1024px) {
+  .contatos-form {
+    min-width: 350px;
+  }
+}
+
+@media (max-width: 425px) {
+  .contatos-form {
+    min-width: 200px;
+  }
 }
 
 .contatos-form input {
@@ -689,11 +778,17 @@ header .container {
 }
 
 .contatos-form textarea {
-  min-height: 150px;
+  min-height: 200px;
   padding: 10px 15px;
   border-radius: 5px;
   color: black;
   border: none;
+}
+
+@media (max-width: 425px) {
+  .contatos-form input {
+    margin-bottom: 0px;
+  }
 }
 
 .contatos > a {
@@ -714,7 +809,12 @@ header .container {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
   background-color: var(--c9);
-  padding: 10px 0;
+  padding: 10px 75px;
+}
+
+@media (max-width: 425px) {
 }
