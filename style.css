@@ -74,7 +74,7 @@
   font: 500 20px/1.5 "Hanken Grotesk";
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .font-S {
     font: 500 15px/1.5 "Hanken Grotesk";
   }
@@ -97,7 +97,7 @@
 .font-M3 {
   font: 700 30px/1.66 "Hanken Grotesk";
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .font-M3 {
     font: 700 20px/1.66 "Hanken Grotesk";
   }
@@ -115,6 +115,12 @@
 
 .font-XL {
   font: 500 75px/1.33 "Tomorrow";
+}
+
+@media (max-width: 1024px) {
+  .font-XL {
+    font: 500 50px/1.33 "Tomorrow";
+  }
 }
 
 @media (max-width: 768px) {
@@ -302,7 +308,7 @@ header .container {
 .projetos {
   display: grid;
   text-align: center;
-  margin-top: 125px;
+  margin-top: 75px;
 }
 
 @media (max-width: 768px) {
@@ -405,6 +411,14 @@ header .container {
   margin-bottom: 75px;
 }
 
+@media (max-width: 425px) {
+  .detalhe {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
 .sobre-mim h1 {
   display: flex;
   justify-content: center;
@@ -426,6 +440,19 @@ header .container {
   display: flex;
   justify-content: space-between;
   max-width: 880px;
+}
+
+@media (max-width: 1024px) {
+  .sobre-conteudo {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-conteudo {
+    display: grid;
+    justify-content: center;
+  }
 }
 
 .sobre-conteudo h2 {
@@ -459,15 +486,44 @@ header .container {
   position: absolute;
   left: -30px;
 }
+#cursos h2::before {
+  content: url("./static/sobre-mim/cursos.svg");
+  position: absolute;
+  left: -30px;
+}
 
 .sobre-item {
   min-height: 205px;
   position: relative;
 }
 
+@media (max-width: 1024px) {
+  .sobre-item {
+    min-height: 175px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-item {
+    min-height: auto;
+  }
+}
+
+.sobre-academico,
+.sobre-tecnico {
+  margin: 0 25px;
+}
+
 .sobre-tecnico .sobre-item-lista {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 190px));
+}
+
+@media (max-width: 768px) {
+  .sobre-tecnico .sobre-item-lista {
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .sobre-academico .sobre-item-lista {
@@ -485,8 +541,18 @@ header .container {
   background-color: var(--c2);
 }
 
-.sobre-item:last-child ::after {
+#cursos:last-child ::after,
+#ferramentas:last-child ::after {
   height: 0;
+}
+
+@media (max-width: 768px) {
+  #ferramentas:last-child ::after {
+    height: 1px;
+  }
+  #cursos:last-child ::after {
+    height: 0;
+  }
 }
 
 .sobre-item-lista li {
@@ -499,6 +565,18 @@ header .container {
   margin-bottom: 61px;
 }
 
+@media (max-width: 1024px) {
+  .sobre-item-lista :last-child {
+    margin-bottom: 51px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-item-lista :last-child {
+    margin-bottom: 76px;
+  }
+}
+
 .sobre-item-lista li::before {
   position: absolute;
   content: "";
@@ -507,6 +585,12 @@ header .container {
   height: 2px;
   left: -10px;
   top: 14px;
+}
+
+@media (max-width: 1024px) {
+  .sobre-item-lista li::before {
+    top: 10px;
+  }
 }
 
 .contatos {
