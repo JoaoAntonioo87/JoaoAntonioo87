@@ -122,6 +122,13 @@ a {
   justify-content: center;
 }
 
+.contato-rapido {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px;
+}
+
 .header-bg {
   background: var(--c9);
   padding: 25px 0;
@@ -597,7 +604,10 @@ footer {
   }
   .projetos {
     margin-top: 75px;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
+  }
+  .detalhe {
+    display: none;
   }
   .intro-redes a:hover {
     margin: 0 0;
@@ -621,6 +631,9 @@ footer {
   }
   .sobre-item-lista :last-child {
     margin-bottom: 76px;
+  }
+  .contatos {
+    padding-bottom: 50px;
   }
   .contatos-tudo {
     display: grid;
@@ -653,6 +666,11 @@ footer {
 }
 
 @media (max-width: 425px) {
+  .contato-rapido img {
+    max-width: 50px;
+    padding: 5px;
+    background-color: #1d40bf;
+  }
   .intro-conteudo {
     padding: 50px 0;
   }
@@ -667,11 +685,6 @@ footer {
     height: 50%;
   }
   .projeto-item p {
-    margin-bottom: 50px;
-  }
-  .detalhe {
-    display: flex;
-    justify-content: center;
     margin-bottom: 50px;
   }
   .contatos {
