@@ -126,7 +126,21 @@ a {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  padding: 10px;
+  z-index: 100;
+}
+
+.contato-rapido.ativo a {
+  background-color: rgba(0, 265, 0, 0.2);
+  transition: all 0.5s;
+  padding-right: 10px;
+}
+
+.contato-rapido a {
+  color: var(--c9);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  gap: 5px;
 }
 
 .header-bg {
@@ -593,6 +607,10 @@ footer {
   header .logo {
     content: url("./static/logo2.svg");
   }
+  .contato-rapido img {
+    max-width: 50px;
+    padding: 5px;
+  }
   .intro-conteudo {
     padding: 75px 0 50px 0;
   }
@@ -666,10 +684,6 @@ footer {
 }
 
 @media (max-width: 425px) {
-  .contato-rapido img {
-    max-width: 50px;
-    padding: 5px;
-  }
   .intro-conteudo {
     padding: 50px 0;
   }
