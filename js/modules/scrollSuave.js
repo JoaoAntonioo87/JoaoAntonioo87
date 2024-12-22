@@ -1,5 +1,5 @@
 export default function scrollSuave() {
-  const listaLinks = Array.from(document.querySelectorAll(".header-menu a"));
+  const listaLinks = Array.from(document.querySelectorAll("[href^='#']"));
   const eventos = ["click", "touchstart"];
 
   function handleAnima(event) {

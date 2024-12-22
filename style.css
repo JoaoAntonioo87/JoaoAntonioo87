@@ -1,3 +1,5 @@
+@import url("./anima.css");
+
 /* Padrões */
 
 :root {
@@ -129,18 +131,13 @@ a {
   z-index: 100;
 }
 
-.contato-rapido.ativo a {
-  background-color: rgba(0, 265, 0, 0.2);
-  transition: all 0.5s;
-  padding-right: 10px;
-}
-
 .contato-rapido a {
+  background-color: rgba(0, 265, 0, 0.7);
+  transition: all 0.5s;
   color: var(--c9);
   display: flex;
   align-items: center;
   border-radius: 10px;
-  gap: 5px;
 }
 
 .header-bg {
@@ -174,6 +171,7 @@ header .container {
 
 .intro-bg {
   background-image: url("./static/intro.jpg");
+  height: 535px;
 }
 
 .intro-conteudo {
@@ -218,6 +216,7 @@ header .container {
   display: grid;
   text-align: center;
   margin-top: 75px;
+  min-height: 100%;
 }
 
 .projetos h1 {
@@ -280,7 +279,6 @@ header .container {
   letter-spacing: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
-  /* box-sizing: border-box; */
 }
 
 .projeto-item a:hover {
@@ -294,9 +292,8 @@ header .container {
 }
 
 .sobre-mim h1 {
-  display: flex;
-  justify-content: center;
   position: relative;
+  justify-self: center;
   margin-bottom: 75px;
 }
 
@@ -595,6 +592,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .intro-bg {
+    max-height: 425px;
+  }
   .font-M1 {
     font: 700 20px/1 "Hanken Grotesk";
   }
